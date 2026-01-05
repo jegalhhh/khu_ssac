@@ -61,12 +61,9 @@ python frame_maker.py --fps 20 --width 640 --height 360 --batch 10 --print-only
 
 - **fp3와 batch변경 가능
 
-## 성능 튜닝 공식(직관적으로)
-- “추론 갱신 주기(초)” ≈ batch / fps
-- 예: fps=20, batch=10 → 0.5초마다 추론
-- 느리면: width/height↓, fps↓, batch↓ (우선순위: 해상도↓가 제일 큼)
+## 속도 공식(직관적으로)
+- “추론 갱신 주기(초)” = batch / fps
+- 예: fps=20, batch=10 -> 0.5초마다 추론
 
 ## ffmpeg 캡처 주의사항(중요)
-- 지금 방식은 desktop 캡처라서 scrcpy 창이 다른 창에 가리면 그대로 캡처됨
-  - “항상 최상단” 권장
-- 창만 캡처하고 싶으면(선택): title=scrcpy 같은 방식이 있는데, 창 제목이 정확히 맞아야 함
+- 지금 방식은 desktop 캡처라서 scrcpy 창이 다른 창에 가리면 그대로 캡처됨 -> “항상 최상단” 권장
